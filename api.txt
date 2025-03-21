@@ -1,0 +1,19 @@
+auth
+    POST /login
+    POST /register
+    POST /verify-otp
+    POST /set-password
+    POST /reset-password
+
+restaurants
+    GET /restaurants/
+    GET /restaurants/info/
+    GET /restaurants/menu/
+
+
+orders
+    POST /orders/
+    GET /orders/
+
+address
+    POST /orders/
