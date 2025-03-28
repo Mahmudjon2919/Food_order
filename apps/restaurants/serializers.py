@@ -1,25 +1,16 @@
 from rest_framework import serializers
-from .models import RestaurantInfo, Dish, Order, Rating
+from .models import RestaurantInfo, Dish, Rating
 
-# Restaurant Information Serializer
 class RestaurantInfoSerializer(serializers.ModelSerializer):
     class Meta:
         model = RestaurantInfo
-        fields = ["id", "name", "description", "address", "phone", "working_hours", "telegram", "facebook", "instagram"]
+        fields = ["name", "description", "address", "phone", "working_hours", "telegram", "facebook", "instagram"]
 
-# Dish Serializer
 class DishSerializer(serializers.ModelSerializer):
     class Meta:
         model = Dish
         fields = ["id", "name", "price", "discount", "average_rating", "is_active", "sold_count"]
 
-# Order Status Serializer
-class OrderStatusSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Order
-        fields = ["id", "status"]
-
-# Rating Serializer
 class RatingSerializer(serializers.ModelSerializer):
     class Meta:
         model = Rating

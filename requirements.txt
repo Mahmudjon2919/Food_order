@@ -2,6 +2,7 @@ asgiref==3.8.1
 Booktype==1.5
 certifi==2025.1.31
 cffi==1.17.1
+chardet==5.2.0
 charset-normalizer==3.4.1
 cryptography==44.0.2
 defusedxml==0.7.1
@@ -14,12 +15,14 @@ idna==3.10
 inflection==0.5.1
 oauthlib==3.2.2
 packaging==24.2
+pillow==11.1.0
 pycparser==2.22
 PyJWT==2.9.0
 python3-openid==3.2.0
 pytz==2025.1
 PyYAML==6.0.2
 redis==5.2.1
+reportlab==4.3.1
 requests==2.32.3
 requests-oauthlib==2.0.0
 setuptools==76.1.0

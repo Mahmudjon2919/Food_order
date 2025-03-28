@@ -26,6 +26,7 @@ urlpatterns = [
     # API yo‘llari
     path("api/v1/", include("apps.users.urls")),
     path("api/v1/", include("apps.restaurants.urls")),
+    path("api/v1/", include("apps.orders.urls")),
     path("auth/", include("djoser.urls")),  # Djoser autentifikatsiya API
     path("auth/", include("djoser.urls.jwt")),  # JWT autentifikatsiya API
 

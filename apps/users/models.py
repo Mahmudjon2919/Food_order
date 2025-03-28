@@ -9,7 +9,7 @@ class UserManager(BaseUserManager):
 
         email = self.normalize_email(email)
         user = self.model(email=email, name=name)
-        user.set_password(password)  # Parolni hashlashni unutmaslik kerak!
+        user.set_password(password)
         user.save(using=self._db)
 
         return user
@@ -32,7 +32,7 @@ class User(AbstractUser, PermissionsMixin):
     objects = UserManager()
 
     USERNAME_FIELD = 'email'
-    REQUIRED_FIELDS = ["name"]  # `full_name` emas, `name` bo‘lishi kerak
+    REQUIRED_FIELDS = ["name"]
 
     def get_full_name(self):
         return self.name

@@ -38,7 +38,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'apps.orders',
-    'apps.payment',
     'apps.restaurants',
     'apps.users',
     'rest_framework_simplejwt',
@@ -163,19 +162,19 @@ SIMPLE_JWT = {
 DJOSER = {
     "LOGIN_FIELD": "email",
     "USER_CREATE_PASSWORD_RETYPE": True,
-    "SEND_ACTIVATION_EMAIL": False,  # Email faollashtirishni o‘chirib tashlaymiz
+    "SEND_ACTIVATION_EMAIL": False,
     "SEND_CONFIRMATION_EMAIL": False,
     "PASSWORD_RESET_CONFIRM_URL": "password/reset/confirm/{uid}/{token}",
     "SET_PASSWORD_RETYPE": True,
     "SERIALIZERS": {
-        "user_create": "accounts.serializers.UserCreateSerializer",  # Faqat ro‘yxatdan o‘tish uchun
+        "user_create": "accounts.serializers.UserCreateSerializer",
         "user": "djoser.serializers.UserSerializer",
         "current_user": "djoser.serializers.UserSerializer",
     },
     "PERMISSIONS": {
-        "user": ["rest_framework.permissions.IsAuthenticated"],  # Profil faqat login bo‘lgandan keyin ko‘rinadi
-        "user_list": ["rest_framework.permissions.IsAdminUser"],  # Faqat admin foydalanuvchilarni ko‘ra oladi
-        "user_delete": ["rest_framework.permissions.IsAdminUser"],  # Foydalanuvchini o‘chirish faqat adminga ruxsat
+        "user": ["rest_framework.permissions.IsAuthenticated"],
+        "user_list": ["rest_framework.permissions.IsAdminUser"],
+        "user_delete": ["rest_framework.permissions.IsAdminUser"],
     },
 }
 
